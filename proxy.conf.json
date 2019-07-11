@@ -1,0 +1,7 @@
+{
+    "/api/user/register": {
+        "target": "http://project-cd-rest.herokuapp.com",
+        "secure": false,
+        "pathRewrite": {"^/api" : ""} 
+    }
+}

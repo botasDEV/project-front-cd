@@ -1,0 +1,24 @@
+<div class="container">
+    <h4 class="register-title">Register</h4>
+    <form  #signupForm="ngForm" (ngSubmit)="addClient(signupForm)">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [formControl]="name" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" [formControl]="username" id="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" [formControl]="email" required>
+      </div> 
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" [formControl]="password" id="password">
+      </div>
+ 
+      <button class="btn btn-link" (click)='closeModal("custom-modal-2")'>Cancel</button>
+      <button type="submit" class="btn btn-success">Create</button>
+    </form>
+</div>
